@@ -122,7 +122,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
     OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
     
-      #jenkins
+    #jenkins
     sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
     https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
     echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
@@ -137,3 +137,21 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     - Access Jenkins in a web browser using the public IP of your EC2 instance.
         
         publicIp:8080
+
+2. **Install Necessary Plugins in Jenkins:**
+
+Goto Manage Jenkins →Plugins → Available Plugins →
+
+Install below plugins
+
+1 Eclipse Temurin Installer (Install without restart)
+
+2 SonarQube Scanner (Install without restart)
+
+3 NodeJs Plugin (Install Without restart)
+
+4 Email Extension Plugin
+
+### **Configure Java and Nodejs in Global Tool Configuration**
+
+Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
