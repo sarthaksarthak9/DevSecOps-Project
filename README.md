@@ -107,3 +107,18 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 2. **Integrate SonarQube and Configure:**
     - Integrate SonarQube with your CI/CD pipeline.
     - Configure SonarQube to analyze code for quality and security issues.
+    
+**Phase 3: CI/CD Setup**
+
+1. **Install Jenkins for Automation:**
+    - Install Jenkins on the EC2 instance to automate deployment:
+    Install Java
+    
+    ```bash
+    sudo apt update
+    sudo apt install fontconfig openjdk-17-jre
+    java -version
+    openjdk version "17.0.8" 2023-07-18
+    OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
+    OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
+    
