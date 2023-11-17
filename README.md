@@ -342,3 +342,12 @@ pipeline{
         }
     }
 }
+
+If you get docker login failed errorr
+
+sudo su
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+
+
+```
