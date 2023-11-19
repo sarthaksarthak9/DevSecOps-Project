@@ -377,3 +377,15 @@ sudo systemctl restart jenkins
    sudo mv consoles/ console_libraries/ /etc/prometheus/
    sudo mv prometheus.yml /etc/prometheus/prometheus.yml
    ```
+
+   Set ownership for directories:
+
+   ```bash
+   sudo chown -R prometheus:prometheus /etc/prometheus/ /data/
+   ```
+
+   Create a systemd unit configuration file for Prometheus:
+
+   ```bash
+   sudo nano /etc/systemd/system/prometheus.service
+   ```
