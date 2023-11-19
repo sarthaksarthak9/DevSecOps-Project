@@ -669,3 +669,8 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
 2. **Configure Prometheus Plugin Integration:**
     - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
 
+# Phase 6: Kubernetes
+
+## Create Kubernetes Cluster with Nodegroups
+
+In this phase, you'll set up a Kubernetes cluster with node groups. This will provide a scalable environment to deploy and manage your applications.
