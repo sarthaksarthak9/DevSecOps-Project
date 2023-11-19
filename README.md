@@ -467,3 +467,43 @@ Add the following content to the `prometheus.service` file:
    ```bash
    sudo nano /etc/systemd/system/node_exporter.service
    ```
+   
+   Add the following content to the `node_exporter.service` file:
+
+   ```plaintext
+   [Unit]
+   Description=Node Exporter
+   Wants=network-online.target
+   After=network-online.target
+
+   StartLimitIntervalSec=500
+   StartLimitBurst=5
+
+   [Service]
+   User=node_exporter
+   Group=node_exporter
+   Type=simple
+   Restart=on-failure
+   RestartSec=5s
+   ExecStart=/usr/local/bin/node_exporter --collector.logind
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+   Replace `--collector.logind` with any additional flags as needed.
+
+   Enable and start Node Exporter:
+
+   ```bash
+   sudo systemctl enable node_exporter
+   sudo systemctl start node_exporter
+   ```
+
+   Verify the Node Exporter's status:
+
+   ```bash
+   sudo systemctl status node_exporter
+   ```
+
+   You can access Node Exporter metrics in Prometheus.
