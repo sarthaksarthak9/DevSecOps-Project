@@ -417,3 +417,30 @@ Add the following content to the `prometheus.service` file:
    [Install]
    WantedBy=multi-user.target
    ```
+
+    Here's a brief explanation of the key parts in this `prometheus.service` file:
+
+   - `User` and `Group` specify the Linux user and group under which Prometheus will run.
+
+   - `ExecStart` is where you specify the Prometheus binary path, the location of the configuration file (`prometheus.yml`), the storage directory, and other settings.
+
+   - `web.listen-address` configures Prometheus to listen on all network interfaces on port 9090.
+
+   - `web.enable-lifecycle` allows for management of Prometheus through API calls.
+
+      Enable and start Prometheus:
+
+   ```bash
+   sudo systemctl enable prometheus
+   sudo systemctl start prometheus
+   ```
+
+   Verify Prometheus's status:
+
+   ```bash
+   sudo systemctl status prometheus
+   ```
+
+   You can access Prometheus in a web browser using your server's IP and port 9090:
+
+   `http://<your-server-ip>:9090`
