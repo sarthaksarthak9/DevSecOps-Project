@@ -351,3 +351,29 @@ sudo systemctl restart jenkins
 
 
 ```
+
+**Phase 4: Monitoring**
+
+1. **Install Prometheus and Grafana:**
+
+   Set up Prometheus and Grafana to monitor your application.
+
+   **Installing Prometheus:**
+
+   First, create a dedicated Linux user for Prometheus and download Prometheus:
+
+   ```bash
+   sudo useradd --system --no-create-home --shell /bin/false prometheus
+   wget https://github.com/prometheus/prometheus/releases/download/v2.47.1/prometheus-2.47.1.linux-amd64.tar.gz
+   ```
+
+   Extract Prometheus files, move them, and create directories:
+
+   ```bash
+   tar -xvf prometheus-2.47.1.linux-amd64.tar.gz
+   cd prometheus-2.47.1.linux-amd64/
+   sudo mkdir -p /data /etc/prometheus
+   sudo mv prometheus promtool /usr/local/bin/
+   sudo mv consoles/ console_libraries/ /etc/prometheus/
+   sudo mv prometheus.yml /etc/prometheus/prometheus.yml
+   ```
