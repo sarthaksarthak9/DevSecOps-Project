@@ -616,3 +616,8 @@ Open a web browser and navigate to Grafana using your server's IP address. The d
 `http://<your-server-ip>:3000`
 
 You'll be prompted to log in to Grafana. The default username is "admin," and the default password is also "admin."
+
+**Step 8: Change the Default Password:**
+
+When you log in for the first time, Grafana will prompt you to change the default password for security reasons. Follow the prompts to set a new password.
+
