@@ -718,3 +718,13 @@ Replace 'your-job-name' with a descriptive name for your job. The static_configs
 Don't forget to reload or restart Prometheus to apply these changes to your configuration.
 
 To deploy an application with ArgoCD, you can follow these steps, which I'll outline in Markdown format:
+
+### Deploy Application with ArgoCD
+
+1. **Install ArgoCD:**
+
+   You can install ArgoCD on your Kubernetes cluster by following the instructions provided in the [EKS Workshop](https://archive.eksworkshop.com/intermediate/290_argocd/install/) documentation.
+
+2. **Set Your GitHub Repository as a Source:**
+
+   After installing ArgoCD, you need to set up your GitHub repository as a source for your application deployment. This typically involves configuring the connection to your repository and defining the source for your ArgoCD application. The specific steps will depend on your setup and requirements.
