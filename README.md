@@ -23,7 +23,10 @@
 - Provision an EC2 instance on AWS with Ubuntu 22.04.
 - Connect to the instance using SSH.
 
-**Step 2: Clone the Code:**
+![1](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/036f1697-91ae-43b4-9d6e-94ed289adca9)
+
+**Step 2: ![Uploading 1.png…]()
+Clone the Code:**
 
 - Update all the packages and then clone the code.
 - Clone your application's code repository onto the EC2 instance:
@@ -73,6 +76,8 @@ Now recreate the Docker image with your api key:
 ```
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 ```
+![3](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/6ece5a98-40a3-42ef-bdbd-b2bbd53920f1)
+
 
 **Phase 2: Security**
 
@@ -102,12 +107,17 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
         ```
         trivy image <imageid>
         ```
-        
+
+      ![8](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/326a4219-2d20-4f4b-85ad-c824934ff25e)
+
         
 2. **Integrate SonarQube and Configure:**
     - Integrate SonarQube with your CI/CD pipeline.
     - Configure SonarQube to analyze code for quality and security issues.
     
+![9](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/ad9d8baf-3502-4a4a-b212-cf7e2a2411b8)
+
+
 **Phase 3: CI/CD Setup**
 
 1. **Install Jenkins for Automation:**
@@ -137,6 +147,8 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     - Access Jenkins in a web browser using the public IP of your EC2 instance.
         
         publicIp:8080
+      
+![11](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/782fdefd-6195-4222-b95e-0bc5c07756c3)
 
 2. **Install Necessary Plugins in Jenkins:**
 
@@ -151,6 +163,8 @@ Install below plugins
 3 NodeJs Plugin (Install Without restart)
 
 4 Email Extension Plugin
+
+![12](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/6297a208-15f4-49db-9950-19a4fa567c68)
 
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
@@ -176,6 +190,8 @@ Create a Jenkins webhook
 
 1. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
+
+![13](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/071a051a-f4d6-4782-99d4-5f64a02a417e)
 
 ```groovy
 pipeline {
@@ -223,6 +239,8 @@ pipeline {
 ```
 
 Certainly, here are the instructions without step numbers:
+
+![14](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/452a416c-ca0f-4487-9b20-3f5532d86576)
 
 **Install Dependency-Check and Docker Tools in Jenkins**
 
