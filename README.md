@@ -23,9 +23,9 @@
 - Provision an EC2 instance on AWS with Ubuntu 22.04.
 - Connect to the instance using SSH.
 
-![1](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/036f1697-91ae-43b4-9d6e-94ed289adca9)
+![Screenshot from 2023-12-01 16-45-45](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/bd9cf988-040d-4bb8-adc4-441c794a60c9)
 
-**Step 2: ![Uploading 1.png…]()
+**Step 2: 
 Clone the Code:**
 
 - Update all the packages and then clone the code.
@@ -76,7 +76,7 @@ Now recreate the Docker image with your api key:
 ```
 docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 ```
-![3](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/6ece5a98-40a3-42ef-bdbd-b2bbd53920f1)
+![Screenshot from 2023-12-01 16-46-09](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/dc79c224-a450-4db4-95be-2c97b5008fdb)
 
 
 **Phase 2: Security**
@@ -108,14 +108,15 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
         trivy image <imageid>
         ```
 
-      ![8](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/326a4219-2d20-4f4b-85ad-c824934ff25e)
+![Screenshot from 2023-12-01 16-46-53](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/c4088cdf-cd21-45b2-9710-dc0fd370c13c)
+
 
         
 2. **Integrate SonarQube and Configure:**
     - Integrate SonarQube with your CI/CD pipeline.
     - Configure SonarQube to analyze code for quality and security issues.
-    
-![9](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/ad9d8baf-3502-4a4a-b212-cf7e2a2411b8)
+
+![Screenshot from 2023-12-01 16-47-04](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/2674d8c0-1b53-49f3-a092-c4dfe0dfe42e)
 
 
 **Phase 3: CI/CD Setup**
@@ -146,9 +147,9 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
     
     - Access Jenkins in a web browser using the public IP of your EC2 instance.
         
-        publicIp:8080
+ ![Screenshot from 2023-12-01 16-47-23](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/0683a8eb-5304-4aa7-b914-c12c7ff08747)
+publicIp:8080
       
-![11](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/782fdefd-6195-4222-b95e-0bc5c07756c3)
 
 2. **Install Necessary Plugins in Jenkins:**
 
@@ -164,7 +165,8 @@ Install below plugins
 
 4 Email Extension Plugin
 
-![12](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/6297a208-15f4-49db-9950-19a4fa567c68)
+![Screenshot from 2023-12-01 16-47-26](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/7e1a6cc8-fe9e-467a-a50c-2ca0ab961f3d)
+
 
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
@@ -191,7 +193,8 @@ Create a Jenkins webhook
 1. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
 
-![13](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/071a051a-f4d6-4782-99d4-5f64a02a417e)
+![Screenshot from 2023-12-01 16-47-29](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/e9cc2d33-b75e-4e36-a41f-8beb394b94c4)
+
 
 ```groovy
 pipeline {
@@ -240,7 +243,8 @@ pipeline {
 
 Certainly, here are the instructions without step numbers:
 
-![14](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/452a416c-ca0f-4487-9b20-3f5532d86576)
+![Screenshot from 2023-12-01 16-47-32](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/07fb9ec5-47f0-44eb-85a4-1f3bd7a33a33)
+
 
 **Install Dependency-Check and Docker Tools in Jenkins**
 
@@ -376,7 +380,9 @@ sudo systemctl restart jenkins
 
    Set up Prometheus and Grafana to monitor your application.
 
-   **Installing Prometheus:**
+![Screenshot from 2023-12-01 16-48-20](https://github.com/sarthaksarthak9/DevSecOps-Project/assets/122533767/0915ac3b-36b9-4851-8d79-4c8989bea4a6)
+
+ **Installing Prometheus:**
 
    First, create a dedicated Linux user for Prometheus and download Prometheus:
 
